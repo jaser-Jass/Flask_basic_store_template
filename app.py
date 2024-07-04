@@ -6,16 +6,16 @@ def base():
     return render_template('base.html')
 
 @app.route('/clothing')
-def clothes():
-    return render_template('clothing.html')
+def clothing():
+    clothing = ['Футболка', 'Джинсы', 'Платье']
+    return render_template('clothing.html', clothing=clothing)
 
 @app.route('/shoes')
 def shoes():
-    return render_template('shoes.html')
+    shoes = ['Кроссовки', 'Туфли', 'Ботинки']
+    return render_template('shoes.html', shoes=shoes)
 
-@app.route('/jacket')
-def jacket():
-    return render_template('jacket.html')
+
 
 if __name__ == '__main__':
     app.run(debug=True)

@@ -1,23 +1,24 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Интернет-магазин</title>
+    <title>{% block title %}Интернет-магазин{% endblock %}</title>
   </head>
   <body>
-    <div class="header">
-      <h1>Шапка сайта</h1>
-      <ul>
-        <li><a href="/">Главная</a></li>
-        <li><a href="/clothing">Одежда</a></li>
-        <li><a href="/jacket">Куртки</a></li>
-        <li><a href="/shoes">Обувь</a></li>
-      </ul>
-    </div>
+    <header>
+      <h1>Мой интернет магазин</h1>
+      <nav>
+        <ul>
+          <li><a href="/">Главная</a></li>
+          <li><a href="/clothing">Одежда</a></li>
+          <li><a href="/shoes">Обувь</a></li>
+        </ul>
+      </nav>
+    </header>
 
-    <div class="content">{% block content %}{% endblock %}</div>
+    <main>{% block content %} {% endblock %}</main>
 
-    <div class="footer">
-      <p>Подвал сайта</p>
-    </div>
+    <footer>
+      <p>&copy; Мой интернет- магазин</p>
+    </footer>
   </body>
 </html>

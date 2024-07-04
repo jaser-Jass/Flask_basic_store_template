@@ -1,4 +1,9 @@
-{% extends 'base.html' %} {% block content %}
-<h2>Страница с обувью</h2>
-<p>Здесь будет отображаться список обуви</p>
+{% extends 'base.html' %} {% block title %}Обувь - Мой интернет- магазин{%
+endblock %} {% block content %}
+<h2>Обувь</h2>
+<ul>
+  {% for product in shoes %}
+  <li>{{ product }}</li>
+  {% endfor %}
+</ul>
 {% endblock %}
